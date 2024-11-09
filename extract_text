@@ -1,0 +1,86 @@
+from pdfminer.high_level import extract_text
+import pdfplumber
+import pytesseract
+from pdf2image import convert_from_path
+from PIL import Image
+import os
+
+# PDF file_path
+pdf_path = '../5105 project/data/jpmc-esg-report-2023.pdf'
+
+def detect_column_layout(page):
+    """
+    Detect the layout of pages and return the number of columns
+    """
+    text = page.extract_text()
+    if text is None:
+        return 1  # Pages without text are treated as single columns
+    
+    # Get the left margin position of the text block
+    left_margins = [char['x0'] for char in page.chars if 'x0' in char]
+    if not left_margins:
+        return 1  # Unable to detect text position, treated as single column
+    
+    # Clustering detects the left margin position and infers the number of columns
+    left_margins = sorted(left_margins)
+    threshold = 50  # Minimum distance between adjacent columns
+    columns = [left_margins[0]]
+    
+    for margin in left_margins[1:]:
+        if margin - columns[-1] > threshold:
+            columns.append(margin)
+    
+    # The number of columns is the number of detected columns
+    return len(columns)
+
+def extract_pdf_text(pdf_path):
+    text_per_page = {}
+    
+    # Extract structured text and tables using pdfplumber
+    with pdfplumber.open(pdf_path) as pdf:
+        for pagenum, page in enumerate(pdf.pages):
+            page_text = []
+            page_tables = []
+            page_images_text = []
+            
+            # Check the number of page columns
+            column_count = detect_column_layout(page)
+            print(f"Page {pagenum + 1} detected with {column_count} columns layout")
+            
+            # Split page based on number of columns
+            width = page.width
+            if column_count > 1:
+                column_width = width / column_count
+                for i in range(column_count):
+                    left = max(i * column_width - 10, 0)  # Ensure that the left margin is not less than 0
+                    right = min((i + 1) * column_width + 10, width)  # Ensure that the right margin does not exceed the page width
+                    bbox = (left, 0, right, page.height)
+                    column_text = page.within_bbox(bbox).extract_text() or ""
+                    page_text.append(column_text)
+            else:
+                # Single column layout: extract text directly
+                page_text.append(page.extract_text())
+            
+            # If there are pictures or graphic elements, perform OCR processing
+            images = convert_from_path(pdf_path, first_page=pagenum+1, last_page=pagenum+1)
+            for image in images:
+                image_text = pytesseract.image_to_string(image)
+                page_images_text.append(image_text)
+            
+            # Store extracted content for each page
+            text_per_page[f"Page_{pagenum + 1}"] = {
+                'images_text': page_images_text
+            }
+    
+    return text_per_page
+
+# Call the function and output the content of the first page
+result = extract_pdf_text(pdf_path)
+
+# Output
+for page, content in result.items():
+    print(f"{page} Content:")
+    print("\nPicture OCR text content:")
+    for image_text in content['images_text']:
+        print(image_text)
+    print("\n" + "="*50 + "\n")

@@ -1,0 +1,150 @@
+/* styles.css */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    background-color: #fafafa; /* 浅灰色背景 */
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+
+/* 固定背景图样式 */
+.background-image {
+    background-color: #f5f5f5; /* 背景 */
+    background-size: cover;
+    background-position: center;
+    height: 50px; /* 高度为50px */
+    width: 100%; /* 宽度铺满屏幕 */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1; /* 确保背景图在最上层 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+    /* font-weight: bold; */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    /* 设置自定义字体 */
+    font-family: 'Saira', sans-serif; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+
+
+/* 导航栏样式 */
+.navbar {
+    background-color: #f5f5f5; /* 背景 */
+    color: #464646;
+    height: 40px; /* 设置固定的高度 */
+    padding: 0 100px; /* 左右内边距为 70px */
+    display: flex;
+    justify-content: space-evenly; /* 四个项均匀分布 */
+    align-items: center;
+    position: fixed;
+    top: 50px; /* 导航栏紧接背景图下方 */
+    left: 0;
+    width: 100%;
+    z-index: 3; /* 确保导航栏在背景图之上 */
+    border-radius: 10px; /* 圆角 */
+  }
+  
+
+.nav-item a {
+    color: #404040;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 0 15px;
+    transition: background-color 0.3s ease;
+    line-height: 40px; /* 使文字垂直居中 */
+}
+
+.nav-item a:hover {
+    border-bottom: 2px solid #727272; /* 鼠标悬停时下方显示灰色下划线 */
+}
+
+/* 导航项之间的间隔 */
+.nav-item + .nav-item {
+    margin-left: 20px; /* 每个导航项之间有20px的间隔 */
+}
+
+
+/* 主容器设置 */
+.container {
+    display: flex;
+    margin-top: 30px; /* 设置页面边距 */
+}
+
+/* 左右栏的样式 */
+.left-column {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 100px 15px 40px 50px;
+}
+
+.right-column {
+    flex: 2;
+    padding: 100px 50px 40px 15px;
+}
+
+
+/* 左边矩形，长宽比 4:3 */
+.left-box {
+    background-color: #ffffff;
+    border-radius: 10px; /* 圆角 */
+    padding: 20px;
+    color: #222; /* 深灰文字颜色 */
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5); /* 深灰色阴影 */
+    margin-bottom: 30px; /* 添加底部空隙 */
+    width: 100%; /* 宽度占父容器的 100% */
+    
+    /* 设置长宽比为 4:3 */
+    padding-bottom: 60%; /* 高度按 3:4 比例设置，即宽度的 3/4 */
+    
+}
+
+.left-box canvas {
+    width: 100%;
+    height: 100%;
+    position: absolute; /* 绝对定位以适应 .left-box 大小 */
+    top: 0;
+    left: 0;
+}
+
+/* 右边矩形，长宽比 3:4 */
+.right-box {
+    background-color: #ffffff;
+    border-radius: 10px; /* 圆角 */
+    padding: 20px;
+    color: #222; /* 深灰文字颜色 */
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5); /* 深灰色阴影 */
+    margin-bottom: 30px; /* 添加底部空隙 */
+    
+    width: 100%; /* 宽度占父容器的 100% */
+    
+    /* 设置长宽比为 3:4 */
+    padding-bottom: 122.33%; /* 高度按 4:3 比例设置，即宽度的 4/3 */
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+}

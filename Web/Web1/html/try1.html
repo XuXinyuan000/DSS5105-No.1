@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESG Financial Analysis</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Saira:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 固定背景图 -->
+    <div class="background-image">ESG Pioneer</div>
+    
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-item"><a href="../html/index.html">Main</a></div>
+        <div class="nav-item"><a href="#">About Us</a></div>
+        <div class="nav-item"><a href="#" id="uploadBtn">Upload</a></div>
+        <div class="nav-item"><a href="#">Export</a></div>
+    </nav>
+    <!-- 隐藏的文件选择框 -->
+    <input type="file" id="fileInput" style="display: none;" />
+
+    <div class="container">
+        <div class="left-column">
+            <!-- Individual iframes for E, S, and G charts -->
+            <div class="left-box">
+                <iframe src="http://127.0.0.1:8050/e_chart" width="100%" height="100%" style="border: none; display: block;"></iframe>
+                <p>E: Indicator</p>
+            </div>
+            <div class="left-box">
+                <iframe src="http://127.0.0.1:8050/s_chart" width="100%" height="100%" style="border: none; display: block;"></iframe>
+                <p>S: Indicator</p>
+            </div>
+            <div class="left-box">
+                <iframe src="http://127.0.0.1:8050/g_chart" width="100%" height="100%" style="border: none; display: block;"></iframe>
+                <p>G: Indicator</p>
+            </div>
+        </div>
+    
+        <div class="right-column">
+            <div class="right-box">评分标准</div>
+            <div class="right-box">评分解读</div>
+            <div class="right-box">模型准确度</div>
+        </div>
+    </div>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <p>&copy; 2024 ESG Financial Analysis. All rights reserved.</p>
+    </footer>
+
+    <!-- 引入外部 JavaScript 文件 -->
+    <script src="../js/UploadButton.js"></script>
+</body>
+</html>

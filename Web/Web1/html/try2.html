@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESG Financial Analysis</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Saira:wght@400;700&display=swap" rel="stylesheet">
+    <script>
+        // JavaScript functions to show specific content sections
+        function showMainContent() {
+            document.getElementById('mainContent').style.display = 'block';
+            document.getElementById('aboutUsContent').style.display = 'none';
+        }
+
+        function showAboutUsContent() {
+            document.getElementById('mainContent').style.display = 'none';
+            document.getElementById('aboutUsContent').style.display = 'flex';
+        }
+    </script>
+</head>
+<body>
+    <!-- 固定背景图 -->
+    <div class="background-image">ESG Pioneer</div>
+    
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-item"><a href="#" onclick="showMainContent()">Main</a></div>
+        <div class="nav-item"><a href="#" onclick="showAboutUsContent()">About Us</a></div>
+        <div class="nav-item"><a href="#" id="uploadBtn">Upload</a></div>
+        <div class="nav-item"><a href="#">Export</a></div>
+    </nav>
+    <!-- 隐藏的文件选择框 -->
+    <input type="file" id="fileInput" style="display: none;" />
+
+    <!-- 主内容区域（Home 页面），默认显示 -->
+    <div id="mainContent" class="container">
+            <!-- Main Content -->
+            <main class="main-content">
+                <section class="intro">
+                    <h2>Welcome to ESG Financial Analysis</h2>
+                    <p>Providing detailed ESG scoring and reporting for financial sector companies, helping stakeholders understand sustainability, social responsibility, and governance in financial performance.</p>
+                </section>
+        
+                <section class="esg-image">
+                    <img src="../images/ESG-Software.jpg" alt="ESG Overview" class="responsive-image">
+                </section>
+        
+                <section class="features">
+                    <div class="feature-box">
+                        <h3>Environmental Impact</h3>
+                        <p>Analyze environmental practices and impact on the ecosystem, including carbon footprint, renewable energy use, and waste management.</p>
+                    </div>
+                    <div class="feature-box">
+                        <h3>Social Responsibility</h3>
+                        <p>Evaluate social factors like employee treatment, community impact, and customer satisfaction.</p>
+                    </div>
+                    <div class="feature-box">
+                        <h3>Corporate Governance</h3>
+                        <p>Review governance practices such as executive compensation, shareholder rights, and transparency.</p>
+                    </div>
+                </section>
+            </main>
+        
+            <!-- Footer Section -->
+            <footer class="footer">
+                <p>&copy; 2024 ESG Financial Analysis. All rights reserved.</p>
+            </section>
+        </header>
+    </div>
+
+    <!-- ESG 内容区域，默认隐藏，使用 flex 布局来分栏 -->
+    <div id="aboutUsContent" class="container" style="display: none; flex-direction: row; gap: 20px;">
+        <!-- 左侧图表 -->
+        <div class="left-column" style="flex: 3;">
+            <div class="left-box">
+                <iframe src="http://127.0.0.1:8050/e_chart" width="100%" height="100%" style="border: none; display: block;"></iframe>
+                <p>E: Indicator</p>
+            </div>
+            <div class="left-box">
+                <iframe src="http://127.0.0.1:8050/s_chart" width="100%" height="100%" style="border: none; display: block;"></iframe>
+                <p>S: Indicator</p>
+            </div>
+            <div class="left-box">
+                <iframe src="http://127.0.0.1:8050/g_chart" width="100%" height="100%" style="border: none; display: block;"></iframe>
+                <p>G: Indicator</p>
+            </div>
+        </div>
+        
+        <!-- 右侧评分标准等内容 -->
+        <div class="right-column" style="flex: 1; display: flex; flex-direction: column; gap: 20px;">
+            <div class="right-box">评分标准</div>
+            <div class="right-box">评分解读</div>
+            <div class="right-box">模型准确度</div>
+        </div>
+    </div>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <p>&copy; 2024 ESG Financial Analysis. All rights reserved.</p>
+    </footer>
+
+    <!-- 引入外部 JavaScript 文件 -->
+    <script src="../js/UploadButton.js"></script>
+</body>
+</html>

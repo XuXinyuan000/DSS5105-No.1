@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESG Financial Analysis</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/aboutus.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Saira:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <div class="background-image">ESG Pioneer</div>
+    <nav class="navbar">
+        <div class="nav-item"><a href="#" onclick="showMainContent()">Main</a></div>
+        <div class="nav-item"><a href="#" onclick="showAboutUsContent()">About Us</a></div>
+        <div class="nav-item"><a href="#" id="uploadBtn">Upload</a></div>
+        <div class="nav-item"><a href="#">Export</a></div>
+    </nav>
+
+    <input type="file" id="fileInput" style="display: none;" />
+//下面这段div就是main界面那个绿色最好看的部分
+
+    <div id="mainContent" class="container">
+        <main class="main-content">
+            <section class="intro">
+                <h2>Welcome to ESG Financial Analysis</h2>
+                <p>Providing detailed ESG scoring and reporting for financial sector companies, helping stakeholders understand sustainability, social responsibility, and governance in financial performance.</p>
+            </section>
+            <section class="esg-image">
+                <img src="../images/ESG-Software.jpg" alt="ESG Overview" class="responsive-image">
+            </section>
+            <section class="features">
+                <div class="feature-box">
+                    <h3>Environmental Impact</h3>
+                    <p>Analyze environmental practices and impact on the ecosystem, including carbon footprint, renewable energy use, and waste management.</p>
+                </div>
+                <div class="feature-box">
+                    <h3>Social Responsibility</h3>
+                    <p>Evaluate social factors like employee treatment, community impact, and customer satisfaction.</p>
+                </div>
+                <div class="feature-box">
+                    <h3>Corporate Governance</h3>
+                    <p>Review governance practices such as executive compensation, shareholder rights, and transparency.</p>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <p>&copy; 2024 ESG Financial Analysis. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <div id="aboutUsContent" class="container" style="display: none;">
+        <div class="left-column">
+            <div class="left-box" id="e-chart-container">
+                <h2>Score E Chart</h2>
+            </div>
+            <div class="left-box" id="s-chart-container">
+                <h2>Score S Chart</h2>
+            </div>
+            <div class="left-box" id="g-chart-container">
+                <h2>Score G Chart</h2>
+            </div>
+        </div>
+        <div class="right-column" style="flex: 1; display: flex; flex-direction: column; gap: 20px;">
+            <div class="right-box">评分标准</div>
+            <div class="right-box">评分解读</div>
+            <div class="right-box">模型准确度</div>
+        </div>
+    </div>
+
+    <script src="../js/toggleContent.js"></script>
+    <script src="../js/UploadButton.js"></script>
+    <script src="../js/renderCharts.js"></script>
+</body>
+</html>

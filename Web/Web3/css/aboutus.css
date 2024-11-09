@@ -1,0 +1,40 @@
+/* About Us 左侧图表样式 */
+.left-column {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;                /* 每个图表之间增加垂直间距 */
+}
+
+.left-box {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    height: 400px;            /* 固定高度以显示完整图表 */
+    max-width: 100%;          /* 确保宽度占满父容器 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* About Us 右侧评分标准等内容 */
+.right-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;                /* 每个方框之间的垂直间距 */
+    justify-content: flex-start;
+    padding: 20px;
+}
+
+.right-box {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-size: 1.1em;
+    height: 100px;            /* 适当增加每个方框的高度 */
+}

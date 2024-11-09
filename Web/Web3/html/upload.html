@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESG Financial Analysis</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Saira:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>ESG Pioneer</h1>
+        <nav>
+            <a href="index.html">Main</a>
+            <a href="about.html">About Us</a>
+            <a href="upload.html">Upload</a>
+            <a href="export.html">Export</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Upload Data</h2>
+        <form action="upload.py" method="post" enctype="multipart/form-data">
+            <label for="file">Select a CSV file to upload:</label>
+            <input type="file" name="file" id="file" required>
+            <button type="submit">Upload</button>
+        </form>
+    </main>
+    <script src="../js/scripts.js"></script>
+</body>
+</html>

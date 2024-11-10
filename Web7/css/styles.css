@@ -1,0 +1,163 @@
+/* Reset and basic styling */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Saira', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    text-align: center;
+}
+
+/* Header and Navbar */
+.background-image {
+    background-color: #f5f5f5;
+    text-align: center;
+    font-size: 2em;
+    padding: 20px;
+    color: #333;
+    font-weight: bold;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+}
+
+.nav-item a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1em;
+    padding: 5px 10px;
+    transition: color 0.3s ease;
+}
+
+.nav-item a:hover {
+    color: #4CAF50;
+}
+
+/* About Us 左侧图表样式 */
+.left-column {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;                /* 每个图表之间增加垂直间距 */
+}
+
+.left-box {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    height: 400px;            /* 固定高度以显示完整图表 */
+    max-width: 100%;          /* 确保宽度占满父容器 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* About Us 右侧评分标准等内容 */
+.right-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;                /* 每个方框之间的垂直间距 */
+    justify-content: flex-start;
+    padding: 20px;
+}
+
+.right-box {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-size: 1.1em;
+    height: 100px;           /* 适当增加每个方框的高度 */
+}
+
+
+/* Features section */
+/* Features section */
+.features {
+    display: flex;
+    justify-content: space-between;  /* 在父容器中均匀分布子元素 */
+    gap: 40px;                       /* 增加间距，使布局更加大气 */
+    margin-top: 50px;
+    max-width: 1200px;               /* 限制 features 区域的最大宽度 */
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
+}
+
+.feature-box {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    flex: 1;                         /* 使每个方框的宽度相等 */
+    max-width: 300px;                /* 控制每个方框的最大宽度 */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.feature-box:hover {
+    transform: translateY(-5px);
+}
+
+.feature-box h3 {
+    color: #4CAF50;
+    font-size: 1.3em;
+    margin-bottom: 10px;
+}
+
+.feature-box p {
+    color: #555;
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+
+.feature-box {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    width: 100%;
+    max-width: 280px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.feature-box:hover {
+    transform: translateY(-5px);
+}
+
+.feature-box h3 {
+    color: #4CAF50;
+    font-size: 1.3em;
+    margin-bottom: 10px;
+}
+
+.feature-box p {
+    color: #555;
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
+    margin-top: 40px;
+}

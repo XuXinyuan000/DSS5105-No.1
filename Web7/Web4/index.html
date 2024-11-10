@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESG Financial Analysis</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/aboutus.css">
+    <link rel="stylesheet" href="../css/upload.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Saira:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <div class="background-image">ESG Pioneer</div>
+
+<!--这段是显示与隐藏界面的按钮 -->
+    <nav class="navbar">
+        <div class="nav-item"><a href="#" onclick="showMainContent()">Main</a></div>
+        <div class="nav-item"><a href="#" onclick="showAboutUsContent()">About Us</a></div>
+        <div class="nav-item"><a href="#" onclick="showUploadContent()">Upload</a></div>
+    </nav>
+
+    <input type="file" id="fileInput" style="display: none;" />
+<!--下面这段div就是main界面那个绿色最好看的部分 -->
+    <div id="mainContent" class="container">
+        <main class="main-content">
+            <section class="intro">
+                <h2>Welcome to ESG Financial Analysis</h2>
+                <p>Providing detailed ESG scoring and reporting for financial sector companies, helping stakeholders understand sustainability, social responsibility, and governance in financial performance.</p>
+            </section>
+            <section class="esg-image">
+                <img src="../images/ESG-Software.jpg" alt="ESG Overview" class="responsive-image">
+            </section>
+            <section class="features">
+                <div class="feature-box">
+                    <h3>Environmental Impact</h3>
+                    <p>Analyze environmental practices and impact on the ecosystem, including carbon footprint, renewable energy use, and waste management.</p>
+                </div>
+                <div class="feature-box">
+                    <h3>Social Responsibility</h3>
+                    <p>Evaluate social factors like employee treatment, community impact, and customer satisfaction.</p>
+                </div>
+                <div class="feature-box">
+                    <h3>Corporate Governance</h3>
+                    <p>Review governance practices such as executive compensation, shareholder rights, and transparency.</p>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <p>&copy; 2024 ESG Financial Analysis. All rights reserved.</p>
+        </footer>
+    </div>
+<!--下面这段div是第二个图的显示图标部分 -->
+<div id="container" class="container">
+    <!-- 左侧栏 -->
+    <div class="left-column">
+        <div class="left-box">
+            <h2>Score E Chart</h2>
+            <iframe src="http://127.0.0.1:8050/e_chart" width="100%" height="400px" style="border: none;"></iframe>
+        </div>
+        <div class="left-box">
+            <h2>Score S Chart</h2>
+            <iframe src="http://127.0.0.1:8050/s_chart" width="100%" height="400px" style="border: none;"></iframe>
+        </div>
+        <div class="left-box">
+            <h2>Score G Chart</h2>
+            <iframe src="http://127.0.0.1:8050/g_chart" width="100%" height="400px" style="border: none;"></iframe>
+        </div>
+    </div>
+
+    <!-- 右侧栏 -->
+    <div class="right-column">
+        <div class="right-box">
+            <h2>Description of Score</h2>
+            <!-- 加入饼图图片 -->
+            <img src="../images/pie.png" width="400"alt="Pie Chart">
+
+        </div>
+        <div class="right-box">
+            <h2>pyramid_structure Chart</h2>
+            <iframe src="../html/pyramid_structure.html" width="100%" height="400px" style="border: none;"></iframe>
+        </div>
+        <div class="right-box">
+            <h2>Judgement</h2>
+        </div>
+    </div>
+</div>
+
+<!-- Upload 内容区域 -->
+<div id="uploadContent" class="uploadContent" >
+    <h2>Upload Your File</h2>
+    <p>Please select a file to upload.</p>
+    <button id="uploadBtn" class="upload-button">Choose File</button>
+    <!-- 隐藏的文件输入框 -->
+    <input type="file" id="fileInput" style="display: none;" />
+</div>
+
+
+    <script src="../js/toggleContent.js"></script>
+    <script src="../js/UploadButton.js"></script>
+    <script src="../js/renderCharts.js"></script>
+</body>
+</html>

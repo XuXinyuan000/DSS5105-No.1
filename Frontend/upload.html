@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html class="wide wow-animation" lang="en">
+  <head>
+    <title>Upload</title>
+    <meta name="viewport" content="width=device-width height=device-height initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800%7CMuli:100,300,400,600,800">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <div class="preloader" id="loading">
+      <div class="preloader-body">
+        <div id="loading-center-object">
+          <div class="object" id="object_four"></div>
+          <div class="object" id="object_three"></div>
+          <div class="object" id="object_two"></div>
+          <div class="object" id="object_one"></div>
+        </div>
+      </div>
+    </div>
+    <div class="page"> 
+      <!-- Page Header-->
+      <header class="section page-header">
+        <!-- RD Navbar-->
+        <div class="rd-navbar-wrap">
+          <nav class="rd-navbar rd-navbar-classic" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-fixed" data-lg-device-layout="rd-navbar-fixed" data-xl-layout="rd-navbar-static" data-xl-device-layout="rd-navbar-static" data-xxl-layout="rd-navbar-static" data-xxl-device-layout="rd-navbar-static" data-lg-stick-up-offset="0px" data-xl-stick-up-offset="0px" data-xxl-stick-up-offset="0px" data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true">
+            <div class="rd-navbar-main">
+              <!-- RD Navbar Panel-->
+              <div class="rd-navbar-panel">
+                <!-- RD Navbar Toggle-->
+                <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
+                <!-- RD Navbar Brand-->
+                <div class="rd-navbar-brand"><a class="brand" href="index.html"><img class="brand-logo-dark" src="images/esg2.png" alt="" width="134" height="41" srcset="images/esg2.png 2x"/><img class="brand-logo-light" src="images/logo-default-inverse-134x41.png" alt="" width="134" height="41" srcset="images/logo-default-inverse-268x82.png 2x"/></a></div>
+              </div>
+              <div class="rd-navbar-nav-wrap">
+                <!-- 标语 -->
+                <p class="rd-navbar-slogan">ESG is changing our world!</p>
+                <!-- 导航链接 -->
+                <ul class="rd-navbar-nav">
+                  <li class="rd-nav-item"><a class="rd-nav-link" href="index.html">Home</a></li>
+                  <li class="rd-nav-item"><a class="rd-nav-link" href="database.html">Database</a></li>
+                  <li class="rd-nav-item"><a class="rd-nav-link" href="upload.html">Upload</a></li>
+                  <li class="rd-nav-item"><a class="rd-nav-link" href="contact-us.html">Contact us</a></li>
+                </ul>
+                <!-- 其他功能链接 -->
+                <div class="rd-navbar-element rd-navbar-element_centered">
+                  <div class="group-xs">
+                    <!-- GitHub 图标链接 -->
+                    <a class="icon icon-sm link-social-2 mdi mdi-github" href="https://github.com/XuXinyuan000/DSS5105-No.1" target="_blank" title="GitHub Repository"></a>
+                  </div>
+                </div>                
+              </div>
+              <div class="rd-navbar-element rd-navbar-element_right">
+                <a href="https://github.com/XuXinyuan000/DSS5105-No.1" target="_blank" style="text-decoration: none; color: black; font-size: 1.5em;">
+                  <i class="fab fa-github"></i> GitHub
+                </a>
+              </div>
+              <div class="rd-navbar-dummy"></div>
+            </div>
+          </nav>
+        </div>
+      </header>
+      <section class="breadcrumbs-custom">
+        <div class="breadcrumbs-custom-main context-dark">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-xl-9 text-center">
+                <!-- 标题 -->
+                <h3 class="breadcrumbs-custom-title">Upload your file</h3>
+                <div class="upload-container" style="margin-top: 20px;">
+                  <input type="file" id="fileUpload" accept="application/pdf" hidden />
+                  <button
+                  class="btn btn-primary"
+                  id="uploadButton"
+                  onclick="document.getElementById('fileUpload').click();"
+                  style="background-color: #007bff; color: white; padding: 10px 20px; font-size: 16px; border: none; border-radius: 5px; cursor: pointer;"
+                  onmouseover="this.style.backgroundColor='#0056b3';"
+                  onmouseout="this.style.backgroundColor='#007bff';"
+                >
+                  Upload File
+                </button>
+                
+                </div>
+                <!-- 向下滚动图标 -->
+                <a class="link-waypoint-icon icon mdi mdi-chevron-double-down" 
+                  href="#main-content" 
+                  data-waypoint-to="#main-content" 
+                  data-waypoint-relative-to=".rd-navbar-panel">
+                </a>
+                <!-- 文件上传按钮 -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="breadcrumbs-custom-aside">
+          <div class="container">
+            <ul class="breadcrumbs-custom-path">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="database.html">Database</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="breadcrumbs-custom-aside">
+        </div>
+      </section>
+      <section class="section section-2 bg-gray-100 text-center">
+        <div class="container">
+          <div class="toggle-modern" aria-label="Pricing Switch Monthly/Yearly" id="pt-classic-toggle">
+            <div class="toggle-modern-text toggle-modern-text_default">Least Year</div>
+            <button class="toggle-modern-switch content-toggle" data-multitoggle="#pt-classic, #pt-classic-toggle"><span class="toggle-modern-switch-element"></span></button>
+            <div class="toggle-modern-text toggle-modern-text_alternate">Last Year</div>
+          </div>
+          <!-- Pricing Table Classic-->
+          <div class="pt-classic-group" id="pt-classic">
+            <!-- Owl Carousel-->
+            <div class="owl-carousel owl-carousel_type-2" data-items="1" data-md-items="2" data-lg-items="3" data-dots="false" data-nav="true" data-stage-padding="0" data-loop="false" data-margin="30" data-lg-margin="20" data-xl-margin="30" data-mouse-drag="false">
+              <article class="pt-classic wow slideInRightLg" data-wow-delay=".5s">
+                <h4 class="pt-classic-title">Social</h4>
+                <div class="pt-classic-price-outer">
+                  <div class="pt-classic-price" aria-hidden="false">
+                    <div class="pt-classic-price-currency">pts</div>
+                    <div class="pt-classic-price-value">2/10</div>
+                  </div>
+                  <div class="pt-classic-price" aria-hidden="true">
+                    <div class="pt-classic-price-currency">pts</div>
+                    <div class="pt-classic-price-value">2/10</div>
+                  </div>
+                </div>
+                <div class="pt-classic-divider"></div>
+                <ul class="pt-classic-list">
+                  <li>Gender Diversity</li>
+                  
+                  <li aria-disabled="true">High Female Turnover Rate</li>
+                  <li >Offer more diverse career development opportunities and benefits</li>
+                </ul>
+                <div class="pt-classic-footer"><a class="button button-default-outline button-icon button-icon-right button-winona" href="https://sustainabilityreport.metlife.com/content/dam/metlifecom/us/sustainability/Sustainability-2024/sustainability-report-site/pdf/2023-sustainability-report.pdf"><span class="icon mdi mdi-arrow-right"></span>View Report</a></div>
+              </article>
+              <article class="pt-classic pt-classic_style-2 pt-classic_preferred wow scaleIn">
+                <div class="pt-classic-header">
+                  <h4 class="pt-classic-title">Environmental<span class="pt-classic-icon"><span class="icon mdi mdi-heart text-secondary"></span><span class="icon mdi mdi-heart text-secondary"></span></span></h4>
+                  <div class="pt-classic-price-outer">
+                    <div class="pt-classic-price" aria-hidden="false">
+                      <div class="pt-classic-price-currency">pts</div>
+                      <div class="pt-classic-price-value">10/10</div>
+                      <div class="badge badge-1">Brilliant</div>
+                    </div>
+                    <div class="pt-classic-price" aria-hidden="true">
+                      <div class="pt-classic-price-currency">pts</div>
+                      <div class="pt-classic-price-value">6/10</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="pt-classic-divider"></div>
+                <ul class="pt-classic-list">
+                  <li>Low absolute emissions per person</li>
+                  <li>Low water consumption per person</li>
+                  <li aria-disabled="true">High Energy Consumption</li>
+                  <li aria-disabled="true">High Waste Generated</li>
+                </ul>
+                <div class="pt-classic-footer"><a class="button button-secondary button-shadow button-icon button-icon-right button-winona" href="https://sustainabilityreport.metlife.com/content/dam/metlifecom/us/sustainability/Sustainability-2024/sustainability-report-site/pdf/2023-sustainability-report.pdf"><span class="icon mdi mdi-arrow-right"></span>View Report</a>
+                  <p class="pt-classic-note"></p>
+                </div>
+              </article>
+              <article class="pt-classic pt-classic_style-3 wow slideInLeftLg" data-wow-delay=".5s">
+                <h4 class="pt-classic-title">Governance</h4>
+                <div class="pt-classic-price-outer">
+                  <div class="pt-classic-price" aria-hidden="false">
+                    <div class="pt-classic-price-currency">pts</div>
+                    <div class="pt-classic-price-value">6/10</div>
+                  </div>
+                  <div class="pt-classic-price" aria-hidden="true">
+                    <div class="pt-classic-price-currency">pts</div>
+                    <div class="pt-classic-price-value">6/10</div>
+                  </div>
+                </div>
+                <div class="pt-classic-divider"></div>
+                <ul class="pt-classic-list">
+                  <li aria-disabled="true">Inadequate Anti-Corruption Training</li>
+                  <li aria-disabled="true">Limited Assurance Depth of Sustainability Report</li>
+                  <li>Enhance Training Content</li>
+                  <li>Enhance Assurance Quality and Transparency</li>
+                  
+                </ul>
+                <div class="pt-classic-footer"><a class="button button-default-outline button-icon button-icon-right button-winona" href="https://sustainabilityreport.metlife.com/content/dam/metlifecom/us/sustainability/Sustainability-2024/sustainability-report-site/pdf/2023-sustainability-report.pdf"><span class="icon mdi mdi-arrow-right"></span>View Report</a></div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-md bg-gray-100">
+        <div class="container" id="features-8">
+          <div class="row row-50 justify-content-xl-between align-items-center">
+            <!-- 图像部分 -->
+            <div class="col-md-7 col-lg-7">
+              <div class="unit unit-spacing-1 align-items-center">
+                <div class="unit-left">
+                  <!-- 增加宽度和高度以扩大图像显示 -->
+                  <div id="esg" style="width: 650px; height: 500px;"></div>
+                  <div class="icon icon-style-1 mdi mdi-calendar-check"></div>
+                </div>
+              </div>
+            </div>
+            <!-- 文字部分 -->
+            <div class="col-md-5 col-lg-5" style="padding-left: 20px;">
+              <div class="block-4 offset-top-4">
+                <h3>Analysis for the ESG Scores</h3>
+                <p class="big text-gray-900">
+                  The company performs exceptionally well in the Environmental dimension, significantly exceeding the benchmark, showcasing strong sustainability capabilities. However, lower scores in the Social and Governance dimensions lead to an imbalanced overall ESG performance, which may draw attention from regulators and investors. </p >
+                <p class="big text-gray-900">
+                  Suggestion: To achieve balanced growth, the company should focus on reducing female employee turnover, enhancing anti-corruption training, and improving board diversity. At the same time, it should consolidate its environmental strengths, boost market reputation, and leverage data-driven management to drive comprehensive ESG progress and meet stakeholder and regulatory expectations.</p>
+          </div>
+        </div>
+      </section>
+      <section class="section-md bg-gray-100">
+        <!-- Quick and Intuitive Profile Configuration in 3 steps-->
+        <div class="container" id="features-6">
+          <div class="row row-50 justify-content-xl-between align-items-center">
+            <!-- 图像部分 -->
+            <div class="col-md-7 col-lg-7">
+              <div class="unit unit-spacing-1 align-items-center">
+                <div class="unit-left">
+                  <!-- 增加宽度和高度以扩大图像显示 -->
+                  <div id="chart6" style="width: 650px; height: 500px;"></div>
+                  <div class="icon icon-style-1 mdi mdi-calendar-check"></div>
+                </div>
+              </div>
+            </div>
+            <!-- 文字部分 -->
+            <div class="col-md-5 col-lg-5" style="padding-left: 20px;">
+              <div class="block-4 offset-top-4">
+                <h3>Accelerate ESG Growth</h3>
+                <p class="big text-gray-900">
+                  We utilized the Exponential Smoothing method for time series forecasting to analyze and predict the company's ESG scores from 2015 to 2026 </p >
+                <!-- Quote Light-->
+                <div class="block-4 offset-top-4">
+                  <h4>Historical Data (2015-2023)</h4>
+                  <ul class="list-marked list-marked_secondary">
+                    <li>Trend: ESG scores steadily increased from 4 in 2015 to nearly 6 in 2023, reflecting continuous improvements in ESG performance.</li>
+                <div class="block-4 offset-top-4"> 
+                  <h4>Forecast Data (2024-2026)</h4>
+                  <ul class="list-marked list-marked_secondary">
+                    <li>Trend: ESG scores are forecasted to grow at an accelerated pace, reaching nearly 8 in 2026, reflecting almost a twofold improvement compared to 2015.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <hr>
+      <section class="section section-sm bg-gray-100">
+        <div class="container">
+          <!-- Pricing Table Modern-->
+          <div class="pt-modern wow fadeIn" id="tabs-pt">
+            <!-- Nav tabs-->
+            <div class="nav-tabs-outer">
+              <ul class="nav nav-tabs">
+                <li class="nav-item"><a class="nav-link active" href="#tabs-pt-1" data-bs-toggle="tab"><span>Environment</span><span class="nav-item-indicator" role="presentation"></span></a>
+                  <ul class="list pt-modern-features">
+                    <li ><span class="icon"></span><span>Total Greenhouse Gas Emissions</span></li>
+                    <li ><span class="icon"></span><span>Total Waste Generated</span></li>
+                    <li ><span class="icon"></span><span>Total Energy Consumption</span></li>
+                    <li ><span class="icon"></span><span>Total Water Consumption</span></li>
+                  </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="#tabs-pt-2" data-bs-toggle="tab"><span>Social</span><span class="nav-item-indicator" role="presentation"></span></a>
+                  <ul class="list pt-modern-features">
+                    <li><span class="icon"></span><span>Current Employees by Age Groups (30-50)</span></li>
+                    <li><span class="icon"></span><span>Total Number of Employees</span></li>
+                    <li><span class="icon"></span><span>Women on the Board </span></li>
+                    <li><span class="icon"></span><span>Current Employees by Gender (Female) (%)</span></li>
+                    <li><span class="icon"></span><span>Turnover by Gender (Female) (%)</span></li>
+                  </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="#tabs-pt-3" data-bs-toggle="tab"><span>Governance</span><span class="nav-item-indicator" role="presentation"></span></a>
+                  <ul class="list pt-modern-features">
+                    <li><span class="icon"></span><span>Anti-Corruption Training for Employees</span></li>
+                    <li><span class="icon"></span><span> Assurance of Sustainability Report</span></li>
+                  </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="#tabs-pt-4" data-bs-toggle="tab"><span>Financial</span><span class="nav-item-indicator" role="presentation"></span><span class="badge badge-secondary">Other information</span></a>
+                  <ul class="list pt-modern-features">
+                    <li><span class="icon"></span><span>ROE</span></li>
+                    <li><span class="icon"></span><span>Net profit margin</span></li>
+                    <li><span class="icon"></span><span>Asset-liability ratio</span></li>
+                    <li><span class="icon"></span><span>PE</span></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>      
+        </div>
+         
+      </section>
+      
+
+      <hr>
+      <section class="section-md bg-gray-100">
+        <div class="container" id="features-8">
+          <div class="row row-50 justify-content-xl-between align-items-center">
+            <!-- 图像部分 -->
+            <div class="col-md-7 col-lg-7">
+              <div class="unit unit-spacing-1 align-items-center">
+                <div class="unit-left">
+                  <!-- 增加宽度和高度以扩大图像显示 -->
+                  <div id="heatmap" style="width: 850px; height: 600px;"></div>
+                  <div class="icon icon-style-1 mdi mdi-calendar-check"></div>
+                </div>
+              </div>
+            </div>
+            <!-- 文字部分 -->
+            <div class="col-md-3 col-lg-3" style="padding-left: 30px;">
+              <div class="block-3 offset-top-3">
+                <h3>ESG & Financial</h3>
+                <div class="block-4 offset-top-4">
+                  <h4>Financial Impact</h4>
+                  <!-- <ul class="list-marked list-marked_secondary"> -->
+                    <li>Social responsibility (S) investments may reduce short-term profit margins but can boost ROE and market confidence (PE) over time.</li>
+                <div class="block-4 offset-top-4">
+                  <h4>Sustainability</h4>
+                  <!-- <ul class="list-marked list-marked_secondary"> -->
+                    <li>High ESG scores indicate stronger profitability, better debt management, and long-term growth potential.</li>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </section>
+      
+      <!-- Page Footer-->
+      <footer class="section footer-light">
+        <div class="container">
+          <div class="footer-light-main" style="display: flex; align-items: center; justify-content: space-between;">
+            <!-- Logo部分 -->
+            <div class="brand-outer">
+              <a class="brand" href="index.html">
+                <img class="brand-logo-dark" src="images/esg2.png" alt="ESG Logo" width="134" height="41" srcset="images/esg2.png 2x"/>
+              </a>
+            </div>
+            
+            <!-- 链接列表 -->
+            <ul class="list footer-light-list" style="display: flex; list-style: none; padding: 0; margin: 0; align-items: center;">
+              <li style="margin-right: 20px;"><a href="index.html" style="text-decoration: none; color: inherit;">Home</a></li>
+              <li style="margin-right: 20px;"><a href="database.html" style="text-decoration: none; color: inherit;">Database</a></li>
+              <li style="margin-right: 20px;"><a href="#" style="text-decoration: none; color: inherit;">Upload</a></li>
+              <li><a href="contact-us.html" style="text-decoration: none; color: inherit;">Contact</a></li>
+            </ul>
+            
+            <!-- 版权信息 -->
+            <p class="rights" style="margin: 0; align-self: center;">&copy; <span class="copyright-year"></span> ESG Pioneer</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <div class="snackbars" id="form-output-global"></div>
+    <script src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/core.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/forcast.js"></script>
+    <script src="js/heatmap.js"></script>
+    <script src="js/esg.js"></script>
+  </body>
+</html>

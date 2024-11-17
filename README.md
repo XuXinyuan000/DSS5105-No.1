@@ -47,7 +47,7 @@ This project is an automated tool for ESG (Environmental, Social, and Governance
   ``` 
   
 ## Usage Instructions
-- Open fronted-database.html
+- Open frontend-database.html
 - Click the upload button to select an ESG report PDF file
 - The system will automatically process the document and generate three main outputs:
   - ESG metrics data table (including indicator names and corresponding values)

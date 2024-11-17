@@ -47,7 +47,7 @@ This project is an automated tool for ESG (Environmental, Social, and Governance
   ``` 
   
 ## Usage Instructions
-- Open your browser and visit http://localhost:3000
+- Open fronted-database.html
 - Click the upload button to select an ESG report PDF file
 - The system will automatically process the document and generate three main outputs:
   - ESG metrics data table (including indicator names and corresponding values)
@@ -82,11 +82,10 @@ This project is an automated tool for ESG (Environmental, Social, and Governance
 │       ├── style.css
 ├── backend/
 │   ├── app.py
-│   ├── forcast.py
-│   ├── models/
-│   │   ├── extraction/
-│   │   ├── description/
-│   │   └── prediction/
-│   └── utils/
+│   └── models/
+│       ├── extraction/
+│       ├── description/
+│       ├── cross_validation/
+│       └── forcast/
 └── README.md
   ```

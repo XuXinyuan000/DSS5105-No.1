@@ -58,15 +58,28 @@ This project is an automated tool for ESG (Environmental, Social, and Governance
   ```python
  project/
 ├── frontend/
-│   ├── src/
-│   │   ├── components/
-│   │   │   ├── Upload/
-│   │   │   ├── Analysis/
-│   │   │   └── Prediction/
-│   │   ├── pages/
-│   │   └── utils/
-│   ├── public/
-│   └── package.json
+│   ├── src
+│   └── js/
+│       ├── core.min.js
+│       ├── account.js
+│       ├── accuracy.js
+│       ├── heatmap.js
+│       ├── forcast.js
+│       ├── pyramid.js
+│       ├── T_chart.js
+│       ├── E_chart.js
+│       ├── S_chart.js
+│       ├── G_chart.js
+│   └── contact-us.html
+│   └── database.html
+│   └── index.html
+│   └── upload.html
+│   └── images
+│   └── fonts
+│   └── css
+│       ├── bootstrap.css
+│       ├── fonts.css
+│       ├── style.css
 ├── backend/
 │   ├── app.py
 │   ├── models/
